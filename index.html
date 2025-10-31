@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Movie Search</h1>
+    <form id="search-form">
+      <input id="query" type="text" placeholder="Search movies..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <section id="results" class="grid"></section>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+        <div id="details"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    window.API_BASE = 'http://localhost:4000';
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
